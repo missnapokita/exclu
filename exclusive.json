@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "exclusive_skins": [
+    {
+      "id": "exclusive_001",
+      "hero": "Fanny",
+      "skin_name": "Exclusive Skin",
+      "image": "https://example.com/fanny.jpg",
+      "payload": "AES_ENCRYPTED_DATA",
+      "enabled": true,
+      "new": true
+    }
+  ]
+}
