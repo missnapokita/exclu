@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111318">
+<title>Exclusive Skins Admin</title>
+<link rel="preconnect" href="https://api.github.com">
+<style>
+:root{
+  --bg:#0d0f13;
+  --panel:#15181e;
+  --panel2:#1a1e25;
+  --line:#2a3039;
+  --text:#f4f6f8;
+  --muted:#929aa7;
+  --accent:#79c96a;
+  --danger:#ff5c67;
+  --warning:#ffcf66;
+  --shadow:0 18px 50px rgba(0,0,0,.32);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#0b0d11,#101319 55%,#0c0e12);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  min-height:100vh;
+}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.wrap{max-width:1120px;margin:auto;padding:22px 16px 90px}
+header{
+  display:flex;gap:16px;align-items:center;justify-content:space-between;
+  margin:6px 0 18px
+}
+h1{font-size:25px;margin:0}
+.sub{color:var(--muted);font-size:13px;margin-top:5px}
+.badge{
+  display:inline-flex;align-items:center;gap:7px;
+  border:1px solid var(--line);background:var(--panel);
+  padding:8px 11px;border-radius:999px;color:var(--muted);font-size:12px
+}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--warning)}
+.dot.ok{background:var(--accent)}
+.card{
+  background:rgba(21,24,30,.94);border:1px solid var(--line);
+  border-radius:18px;box-shadow:var(--shadow);padding:16px;margin-bottom:14px
+}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+label{display:block;color:var(--muted);font-size:12px;margin:0 0 7px}
+input,textarea{
+  width:100%;border:1px solid var(--line);background:#0f1217;color:var(--text);
+  border-radius:12px;padding:12px 13px;outline:none
+}
+input:focus,textarea:focus{border-color:#4d7050}
+textarea{min-height:110px;resize:vertical}
+.actions{display:flex;flex-wrap:wrap;gap:9px}
+.btn{
+  border:1px solid var(--line);background:var(--panel2);color:var(--text);
+  padding:11px 14px;border-radius:12px;font-weight:700
+}
+.btn:hover{filter:brightness(1.08)}
+.btn.primary{background:var(--accent);color:#0c130b;border-color:transparent}
+.btn.danger{color:#ffd9dc;border-color:#593238;background:#25171a}
+.btn.ghost{background:transparent}
+.toolbar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 10px
+}
+.toolbar h2{margin:0;font-size:18px}
+.count{color:var(--muted);font-size:13px}
+.list{display:grid;gap:12px}
+.item{
+  background:var(--panel);border:1px solid var(--line);border-radius:17px;
+  padding:13px;display:grid;grid-template-columns:74px 1fr auto;gap:13px;align-items:center
+}
+.thumb{
+  width:74px;height:74px;border-radius:13px;background:#0f1217;border:1px solid var(--line);
+  object-fit:cover
+}
+.title{font-weight:800;margin-bottom:5px}
+.meta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+.tag{
+  font-size:11px;padding:4px 8px;border-radius:999px;background:#222831;border:1px solid var(--line)
+}
+.tag.green{color:#bff0b5;border-color:#355139;background:#162018}
+.rowactions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.smallbtn{
+  border:1px solid var(--line);background:#1b2027;color:var(--text);
+  padding:8px 10px;border-radius:10px;font-size:12px;font-weight:700
+}
+.smallbtn.danger{color:#ffb7bd}
+.empty{
+  text-align:center;color:var(--muted);padding:32px;border:1px dashed var(--line);border-radius:15px
+}
+.modal{
+  position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:flex-end;
+  justify-content:center;padding:14px;z-index:50
+}
+.modal.show{display:flex}
+.sheet{
+  width:min(720px,100%);max-height:92vh;overflow:auto;background:#14181e;border:1px solid var(--line);
+  border-radius:22px;padding:17px;box-shadow:var(--shadow)
+}
+.sheethead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}
+.sheethead h3{margin:0}
+.checks{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.checks label{display:flex;align-items:center;gap:8px;margin:0;font-size:13px;color:var(--text)}
+.checks input{width:auto}
+.notice{
+  padding:11px 13px;border-radius:12px;background:#171d17;border:1px solid #314331;
+  color:#cfe8cb;font-size:12px;margin-top:10px
+}
+.error{background:#241619;border-color:#573038;color:#ffc4c9}
+pre{
+  background:#0a0c10;border:1px solid var(--line);padding:14px;border-radius:13px;
+  overflow:auto;white-space:pre-wrap;word-break:break-word;color:#dce3ea
+}
+footer{color:var(--muted);text-align:center;font-size:12px;margin-top:24px}
+@media(max-width:760px){
+  .grid,.grid3{grid-template-columns:1fr}
+  .item{grid-template-columns:62px 1fr}
+  .thumb{width:62px;height:62px}
+  .rowactions{grid-column:1/-1;justify-content:flex-start}
+  header{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Exclusive Skins Admin</h1>
+      <div class="sub">Manage <b>exclusive.json</b> on GitHub Pages</div>
+    </div>
+    <div class="badge"><span id="statusDot" class="dot"></span><span id="statusText">Not connected</span></div>
+  </header>
+
+  <section class="card">
+    <div class="grid">
+      <div>
+        <label>GitHub Fine-grained Token</label>
+        <input id="token" type="password" placeholder="github_pat_..." autocomplete="off">
+      </div>
+      <div>
+        <label>Commit message</label>
+        <input id="commitMessage" value="Update exclusive skins">
+      </div>
+    </div>
+    <div class="checks">
+      <label><input id="rememberToken" type="checkbox"> Remember token on this device</label>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="loadBtn">Load from GitHub</button>
+      <button class="btn" id="saveBtn">Save to GitHub</button>
+      <button class="btn ghost" id="previewBtn">Preview JSON</button>
+    </div>
+    <div id="message" class="notice" style="display:none"></div>
+  </section>
+
+  <div class="toolbar">
+    <div>
+      <h2>Exclusive Items</h2>
+      <div class="count" id="count">0 items</div>
+    </div>
+    <button class="btn primary" id="addBtn">+ Add Item</button>
+  </div>
+
+  <div id="list" class="list">
+    <div class="empty">Load your GitHub JSON to begin.</div>
+  </div>
+
+  <footer>Static GitHub Pages admin • Token is never included in the repository files</footer>
+</div>
+
+<div class="modal" id="editorModal">
+  <div class="sheet">
+    <div class="sheethead">
+      <h3 id="editorTitle">Add Exclusive Skin</h3>
+      <button class="smallbtn" id="closeEditor">Close</button>
+    </div>
+
+    <div class="grid">
+      <div><label>ID</label><input id="f_id" placeholder="fanny_legend_001"></div>
+      <div><label>Hero</label><input id="f_hero" placeholder="Fanny"></div>
+    </div>
+    <div class="grid">
+      <div><label>Skin name</label><input id="f_skin" placeholder="Legend"></div>
+      <div><label>Hero ID (optional)</label><input id="f_hero_id" placeholder="optional"></div>
+    </div>
+    <div>
+      <label>Image URL</label>
+      <input id="f_image" placeholder="https://...">
+    </div>
+    <div class="grid">
+      <div>
+        <label>Script ZIP URL</label>
+        <input id="f_script" placeholder="https://...zip">
+        <button class="btn" id="generatePayloadBtn" type="button" style="margin-top:8px;width:100%">
+          Generate Payload
+        </button>
+      </div>
+      <div>
+        <label>File version</label>
+        <input id="f_version" type="number" min="1" value="1">
+      </div>
+    </div>
+
+    <div>
+      <label>Generated Payload</label>
+      <textarea id="f_payload" readonly placeholder="Press Generate Payload"></textarea>
+    </div>
+
+    <div class="checks">
+      <label><input id="f_enabled" type="checkbox" checked> Enabled</label>
+      <label><input id="f_new" type="checkbox" checked> New</label>
+    </div>
+
+    <div id="payloadState" class="notice">Enter the Script ZIP URL, then press Generate Payload.</div>
+
+    <div class="actions" style="margin-top:14px">
+      <button class="btn primary" id="saveItemBtn">Save Item</button>
+      <button class="btn" id="cancelItemBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="previewModal">
+  <div class="sheet">
+    <div class="sheethead">
+      <h3>JSON Preview</h3>
+      <button class="smallbtn" id="closePreview">Close</button>
+    </div>
+    <pre id="preview"></pre>
+  </div>
+</div>
+
+<script>
+const CFG={
+  owner:"missnapokita",
+  repo:"exclu",
+  branch:"main",
+  path:"exclusive.json"
+};
+
+// Same AES-256-GCM client key used by ExclusiveCrypto.java.
+const KEY_B64URL="2N_RBcHg2XMNtK05C5wB8yuv65Xh1kGDjAI_MoMoh7o";
+
+let data={version:1,exclusive_skins:[]};
+let currentSha=null;
+let editIndex=-1;
+let generatedPayload="";
+
+const $=id=>document.getElementById(id);
+
+function msg(text,isError=false){
+  const el=$("message");
+  el.style.display="block";
+  el.className="notice"+(isError?" error":"");
+  el.textContent=text;
+}
+function clearMsg(){ $("message").style.display="none"; }
+function status(text,ok=false){
+  $("statusText").textContent=text;
+  $("statusDot").className="dot"+(ok?" ok":"");
+}
+function b64urlToBytes(s){
+  s=s.replace(/-/g,"+").replace(/_/g,"/");
+  while(s.length%4)s+="=";
+  const bin=atob(s), out=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++)out[i]=bin.charCodeAt(i);
+  return out;
+}
+function bytesToB64url(bytes){
+  let bin="";
+  for(let i=0;i<bytes.length;i++)bin+=String.fromCharCode(bytes[i]);
+  return btoa(bin).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+}
+function utf8ToBase64(str){
+  const bytes=new TextEncoder().encode(str);
+  let bin="";
+  for(let i=0;i<bytes.length;i++)bin+=String.fromCharCode(bytes[i]);
+  return btoa(bin);
+}
+function base64ToUtf8(str){
+  const bin=atob(str.replace(/\n/g,""));
+  const bytes=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
+async function importKey(){
+  return crypto.subtle.importKey(
+    "raw",b64urlToBytes(KEY_B64URL),{name:"AES-GCM"},false,["encrypt","decrypt"]
+  );
+}
+async function encryptPayload(id,scriptUrl,fileVersion){
+  const key=await importKey();
+  const iv=crypto.getRandomValues(new Uint8Array(12));
+  const aad=new TextEncoder().encode("masterkit-exclusive:"+id);
+  const plain=new TextEncoder().encode(JSON.stringify({
+    script_url:scriptUrl,
+    file_version:Number(fileVersion)||1
+  }));
+  const encrypted=new Uint8Array(await crypto.subtle.encrypt(
+    {name:"AES-GCM",iv,additionalData:aad,tagLength:128},key,plain
+  ));
+  return "v1."+bytesToB64url(iv)+"."+bytesToB64url(encrypted);
+}
+async function decryptPayload(id,payload){
+  if(!payload || !payload.startsWith("v1."))throw new Error("Not encrypted with v1");
+  const parts=payload.split(".");
+  if(parts.length!==3)throw new Error("Invalid payload");
+  const key=await importKey();
+  const plain=await crypto.subtle.decrypt(
+    {
+      name:"AES-GCM",
+      iv:b64urlToBytes(parts[1]),
+      additionalData:new TextEncoder().encode("masterkit-exclusive:"+id),
+      tagLength:128
+    },
+    key,
+    b64urlToBytes(parts[2])
+  );
+  return JSON.parse(new TextDecoder().decode(plain));
+}
+function token(){
+  return $("token").value.trim();
+}
+function headers(){
+  const h={
+    "Accept":"application/vnd.github+json",
+    "X-GitHub-Api-Version":"2022-11-28"
+  };
+  if(token())h["Authorization"]="Bearer "+token();
+  return h;
+}
+function apiUrl(){
+  return `https://api.github.com/repos/${CFG.owner}/${CFG.repo}/contents/${CFG.path}?ref=${encodeURIComponent(CFG.branch)}`;
+}
+async function loadGitHub(){
+  clearMsg();
+  status("Loading...");
+  try{
+    const r=await fetch(apiUrl(),{headers:headers()});
+    if(!r.ok)throw new Error(`GitHub ${r.status}: ${await r.text()}`);
+    const j=await r.json();
+    currentSha=j.sha;
+    data=JSON.parse(base64ToUtf8(j.content));
+    if(!Array.isArray(data.exclusive_skins))data.exclusive_skins=[];
+    if(!$("commitMessage").value.trim())$("commitMessage").value="Update exclusive skins";
+    if($("rememberToken").checked && token())localStorage.setItem("exclusive_admin_token",token());
+    else localStorage.removeItem("exclusive_admin_token");
+    render();
+    status("Connected",true);
+    msg(`Loaded ${data.exclusive_skins.length} item(s) from GitHub.`);
+  }catch(e){
+    status("Load failed");
+    msg(e.message,true);
+  }
+}
+async function saveGitHub(){
+  clearMsg();
+  if(!token()){msg("Enter a GitHub token with Contents: Read and write.",true);return}
+  if(!currentSha){
+    msg("Load from GitHub first so the current file SHA is known.",true);return;
+  }
+  const message=$("commitMessage").value.trim()||"Update exclusive skins";
+  const body={
+    message,
+    content:utf8ToBase64(JSON.stringify(data,null,2)+"\n"),
+    sha:currentSha,
+    branch:CFG.branch
+  };
+  status("Saving...");
+  try{
+    const r=await fetch(`https://api.github.com/repos/${CFG.owner}/${CFG.repo}/contents/${CFG.path}`,{
+      method:"PUT",
+      headers:{...headers(),"Content-Type":"application/json"},
+      body:JSON.stringify(body)
+    });
+    if(!r.ok)throw new Error(`GitHub ${r.status}: ${await r.text()}`);
+    const j=await r.json();
+    currentSha=j.content.sha;
+    if($("rememberToken").checked) localStorage.setItem("exclusive_admin_token",token());
+    status("Saved",true);
+    msg("Saved to GitHub successfully.");
+  }catch(e){
+    status("Save failed");
+    msg(e.message,true);
+  }
+}
+function render(){
+  const arr=data.exclusive_skins||[];
+  $("count").textContent=`${arr.length} item${arr.length===1?"":"s"}`;
+  if(!arr.length){
+    $("list").innerHTML='<div class="empty">No Exclusive items yet.</div>';
+    return;
+  }
+  $("list").innerHTML="";
+  arr.forEach((it,i)=>{
+    const row=document.createElement("div");
+    row.className="item";
+    const img=document.createElement("img");
+    img.className="thumb";
+    img.alt="";
+    img.src=it.image||"";
+    img.onerror=()=>{img.removeAttribute("src")};
+
+    const center=document.createElement("div");
+    center.innerHTML=`
+      <div class="title">${esc(it.hero||"Unknown")} • ${esc(it.skin_name||"Unnamed")}</div>
+      <div class="meta">
+        <span class="tag green">Exclusive</span>
+        <span class="tag">${esc(it.id||"no-id")}</span>
+        <span class="tag">${it.enabled===false?"Disabled":"Enabled"}</span>
+        ${it.new?'<span class="tag">New</span>':""}
+      </div>`;
+
+    const actions=document.createElement("div");
+    actions.className="rowactions";
+    actions.innerHTML=`
+      <button class="smallbtn" data-act="edit">Edit</button>
+      <button class="smallbtn" data-act="copy">Copy</button>
+      <button class="smallbtn danger" data-act="delete">Delete</button>`;
+    actions.querySelector('[data-act="edit"]').onclick=()=>openEdit(i);
+    actions.querySelector('[data-act="copy"]').onclick=()=>copyItem(i);
+    actions.querySelector('[data-act="delete"]').onclick=()=>deleteItem(i);
+
+    row.append(img,center,actions);
+    $("list").appendChild(row);
+  });
+}
+function esc(s){
+  return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+}
+function uniqueId(base){
+  let id=(base||"exclusive_copy").replace(/[^a-zA-Z0-9_-]/g,"_");
+  if(!data.exclusive_skins.some(x=>x.id===id))return id;
+  let n=2;
+  while(data.exclusive_skins.some(x=>x.id===id+"_"+n))n++;
+  return id+"_"+n;
+}
+function openAdd(){
+  editIndex=-1;
+  $("editorTitle").textContent="Add Exclusive Skin";
+  $("f_id").value=uniqueId("exclusive_"+String(Date.now()).slice(-6));
+  $("f_hero").value="";
+  $("f_skin").value="";
+  $("f_hero_id").value="";
+  $("f_image").value="";
+  $("f_script").value="";
+  $("f_version").value="1";
+  generatedPayload="";
+  $("f_payload").value="";
+  $("f_enabled").checked=true;
+  $("f_new").checked=true;
+  $("payloadState").textContent="Script URL will be encrypted into the payload when you save this item.";
+  $("editorModal").classList.add("show");
+}
+async function openEdit(i){
+  editIndex=i;
+  const it=data.exclusive_skins[i];
+  $("editorTitle").textContent="Edit Exclusive Skin";
+  $("f_id").value=it.id||"";
+  $("f_hero").value=it.hero||"";
+  $("f_skin").value=it.skin_name||"";
+  $("f_hero_id").value=it.hero_id||"";
+  $("f_image").value=it.image||"";
+  $("f_version").value="1";
+  $("f_script").value="";
+  generatedPayload=it.payload||"";
+  $("f_payload").value=generatedPayload;
+  $("f_enabled").checked=it.enabled!==false;
+  $("f_new").checked=!!it.new;
+  try{
+    const p=await decryptPayload(it.id,it.payload);
+    $("f_script").value=p.script_url||"";
+    $("f_version").value=p.file_version||1;
+    $("payloadState").textContent="Existing encrypted payload decrypted successfully.";
+    $("payloadState").className="notice";
+  }catch(e){
+    $("payloadState").textContent="Current payload could not be decrypted. Enter a Script ZIP URL to replace it.";
+    $("payloadState").className="notice error";
+  }
+  $("editorModal").classList.add("show");
+}
+
+async function generatePayloadFromForm(){
+  const id=$("f_id").value.trim();
+  const script=$("f_script").value.trim();
+  const ver=Math.max(1,parseInt($("f_version").value||"1",10));
+
+  if(!id){
+    alert("Enter the Item ID first.");
+    return;
+  }
+
+  if(!script){
+    alert("Enter the Script ZIP URL first.");
+    return;
+  }
+
+  try{
+    generatedPayload=await encryptPayload(id,script,ver);
+    $("f_payload").value=generatedPayload;
+    $("payloadState").textContent="Payload generated successfully. You can now press Save Item.";
+    $("payloadState").className="notice";
+  }catch(e){
+    generatedPayload="";
+    $("f_payload").value="";
+    $("payloadState").textContent="Payload generation failed: "+e.message;
+    $("payloadState").className="notice error";
+  }
+}
+
+async function saveItem(){
+  const id=$("f_id").value.trim();
+  const hero=$("f_hero").value.trim();
+  const skin=$("f_skin").value.trim();
+  const heroId=$("f_hero_id").value.trim();
+  const image=$("f_image").value.trim();
+  const script=$("f_script").value.trim();
+  const ver=Math.max(1,parseInt($("f_version").value||"1",10));
+  if(!id||!hero||!skin){alert("ID, Hero, and Skin name are required.");return}
+  if(data.exclusive_skins.some((x,idx)=>idx!==editIndex && x.id===id)){
+    alert("That ID already exists.");return;
+  }
+
+  let old=editIndex>=0?data.exclusive_skins[editIndex]:null;
+  let payload=generatedPayload || old?.payload || "";
+
+  if(script && !generatedPayload){
+    payload=await encryptPayload(id,script,ver);
+    generatedPayload=payload;
+    $("f_payload").value=payload;
+  }else if(!payload){
+    alert("Enter the Script ZIP URL and press Generate Payload first.");
+    return;
+  }else if(old && old.id!==id && !generatedPayload){
+    // Changing ID changes AES-GCM AAD, so old payload can no longer decrypt.
+    alert("You changed the ID. Enter the Script ZIP URL and press Generate Payload again.");
+    return;
+  }
+
+  const item={
+    id,hero,skin_name:skin,image,payload,
+    enabled:$("f_enabled").checked,
+    new:$("f_new").checked
+  };
+  if(heroId)item.hero_id=heroId;
+
+  if(editIndex>=0)data.exclusive_skins[editIndex]=item;
+  else data.exclusive_skins.unshift(item);
+
+  $("editorModal").classList.remove("show");
+  render();
+  msg("Changes are local. Press Save to GitHub to publish.");
+}
+async function copyItem(i){
+  const src=data.exclusive_skins[i];
+  let decrypted=null;
+  try{ decrypted=await decryptPayload(src.id,src.payload); }catch(e){}
+  const copied=JSON.parse(JSON.stringify(src));
+  copied.id=uniqueId((src.id||"exclusive")+"_copy");
+  copied.skin_name=(src.skin_name||"Skin")+" Copy";
+  if(decrypted){
+    copied.payload=await encryptPayload(copied.id,decrypted.script_url,decrypted.file_version||1);
+  }else{
+    copied.payload="";
+  }
+  data.exclusive_skins.splice(i+1,0,copied);
+  render();
+  msg(decrypted
+    ?"Item copied and payload re-encrypted for the new ID. Save to GitHub when ready."
+    :"Item copied, but the old payload could not be decrypted. Edit the copy and enter its Script ZIP URL before publishing.");
+}
+function deleteItem(i){
+  const it=data.exclusive_skins[i];
+  if(!confirm(`Delete ${it.hero||""} ${it.skin_name||""}?`))return;
+  data.exclusive_skins.splice(i,1);
+  render();
+  msg("Item deleted locally. Press Save to GitHub to publish.");
+}
+function preview(){
+  $("preview").textContent=JSON.stringify(data,null,2);
+  $("previewModal").classList.add("show");
+}
+
+$("generatePayloadBtn").onclick=()=>generatePayloadFromForm();
+$("loadBtn").onclick=loadGitHub;
+$("saveBtn").onclick=saveGitHub;
+$("addBtn").onclick=openAdd;
+$("saveItemBtn").onclick=()=>saveItem().catch(e=>alert(e.message));
+$("cancelItemBtn").onclick=$("closeEditor").onclick=()=>$("editorModal").classList.remove("show");
+$("previewBtn").onclick=preview;
+$("closePreview").onclick=()=>$("previewModal").classList.remove("show");
+
+$("editorModal").addEventListener("click",e=>{if(e.target===$("editorModal"))$("editorModal").classList.remove("show")});
+$("previewModal").addEventListener("click",e=>{if(e.target===$("previewModal"))$("previewModal").classList.remove("show")});
+
+const saved=localStorage.getItem("exclusive_admin_token");
+if(saved){
+  $("token").value=saved;
+  $("rememberToken").checked=true;
+}
+render();
+</script>
+</body>
+</html>
