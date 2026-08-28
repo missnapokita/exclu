@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Masterkit Exclusive Payload Encoder</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:760px;margin:32px auto;padding:0 16px;line-height:1.45}
+input,textarea,button{box-sizing:border-box;width:100%;margin:7px 0;padding:12px;font-size:15px}
+textarea{min-height:120px;word-break:break-all}
+button{cursor:pointer;font-weight:700}
+.small{opacity:.75;font-size:13px}
+</style>
+</head>
+<body>
+<h2>Masterkit Exclusive Payload Encoder</h2>
+<p class="small">Keep this HTML private/local. Do not upload it publicly because it contains the same client-side AES key used by the app.</p>
+
+<label>Exclusive item ID</label>
+<input id="id" value="exclusive_001">
+
+<label>Script URL</label>
+<input id="url" placeholder="https://...">
+
+<label>File version</label>
+<input id="ver" type="number" min="1" value="1">
+
+<button id="go">Generate encrypted payload</button>
+
+<label>Encrypted payload</label>
+<textarea id="out" readonly></textarea>
+
+<script>
+const KEY_B64URL="2N_RBcHg2XMNtK05C5wB8yuv65Xh1kGDjAI_MoMoh7o";
+
+function b64urlToBytes(s){
+  s=s.replace(/-/g,"+").replace(/_/g,"/");
+  while(s.length%4)s+="=";
+  const bin=atob(s);
+  const out=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++)out[i]=bin.charCodeAt(i);
+  return out;
+}
+function bytesToB64url(bytes){
+  let bin="";
+  for(let i=0;i<bytes.length;i++)bin+=String.fromCharCode(bytes[i]);
+  return btoa(bin).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+}
+
+document.getElementById("go").onclick=async()=>{
+  try{
+    const id=document.getElementById("id").value.trim();
+    const script_url=document.getElementById("url").value.trim();
+    const file_version=parseInt(document.getElementById("ver").value||"1",10);
+
+    if(!id) throw new Error("Item ID is required.");
+    if(!script_url) throw new Error("Script URL is required.");
+
+    const key=await crypto.subtle.importKey(
+      "raw",
+      b64urlToBytes(KEY_B64URL),
+      {name:"AES-GCM"},
+      false,
+      ["encrypt"]
+    );
+
+    const iv=crypto.getRandomValues(new Uint8Array(12));
+    const aad=new TextEncoder().encode("masterkit-exclusive:"+id);
+    const plain=new TextEncoder().encode(JSON.stringify({
+      script_url:script_url,
+      file_version:file_version
+    }));
+
+    const encrypted=new Uint8Array(await crypto.subtle.encrypt(
+      {name:"AES-GCM",iv:iv,additionalData:aad,tagLength:128},
+      key,
+      plain
+    ));
+
+    document.getElementById("out").value=
+      "v1."+bytesToB64url(iv)+"."+bytesToB64url(encrypted);
+  }catch(e){
+    document.getElementById("out").value="ERROR: "+e.message;
+  }
+};
+</script>
+</body>
+</html>
