@@ -16,7 +16,7 @@
     }
   },
   "home_banner": {
-    "visible": true,
+    "visible": false,
     "image_url": "https://i.imgur.com/iy2eBkt.png"
   }
 }
