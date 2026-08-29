@@ -1,0 +1,345 @@
+[
+  {
+    "source": "Classic Recall",
+    "method": "_CLASSIC_RECALL",
+    "source_thumbnail": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Classic%20Recall.webp",
+    "backup_zip": "https://github.com/Meow00001/Explore/raw/main/Emote%20Script/Classic%20Recall/v32/v32%20Classic%20Recall%20Backup.zip",
+    "replacements": [
+      {
+        "name": "M3 Champion",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/M3%20Blacklist.webp",
+        "zip": "https://github.com/Meow00001/Explore/raw/main/Emote%20Script/Classic%20Recall/v32/v32%20Classic%20Recall%20to%20Blacklist.zip"
+      },
+      {
+        "name": "Dashing Cat",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Dashing%20Cat.webp",
+        "zip": "https://github.com/Meow00001/Explore/raw/main/Emote%20Script/Classic%20Recall/v32/v32%20Classic%20Recall%20to%20Dashing%20Cat.zip"
+      },
+      {
+        "name": "Firecrown",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Firecrown.webp",
+        "zip": "https://github.com/Meow00001/Explore/raw/main/Emote%20Script/Classic%20Recall/v32/v32%20Classic%20Recall%20to%20Firecrown.zip"
+      },
+      {
+        "name": "Seal of Anvil Crawlers",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Seal%20of%20Anvil%20Crawlers.webp",
+        "zip": "https://github.com/Meow00001/Explore/raw/main/Emote%20Script/Classic%20Recall/v32/v32%20Classic%20Recall%20to%20Seal%20of%20Anvil%20Crawlers.zip"
+      },
+      {
+        "name": "Super Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Super%20Return.webp",
+        "zip": "https://github.com/Meow00001/Explore/raw/main/Emote%20Script/Classic%20Recall/v32/v32%20Classic%20Recall%20to%20Super%20Return.zip"
+      },
+      {
+        "name": "Fortification Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Fortification%20Return.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Classic%20Recall/Classic%20Recall%20to%20Aspirants%20(Fortification%20Recall).zip"
+      },
+      {
+        "name": "Black Void",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Black%20Void.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Classic%20Recall/Classic%20Recall%20to%20Black%20Void.zip"
+      },
+      {
+        "name": "The Return of the Exorcists",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Exorcist.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Classic%20Recall/Classic%20Recall%20to%20Exorcist.zip"
+      },
+      {
+        "name": "MLBB X Saint Seiya Recall Effect",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Saint%20Seiya.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Classic%20Recall/Classic%20Recall%20to%20Saint%20Seiya.zip"
+      },
+      {
+        "name": "Homebound Lily",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Homebound%20Lily.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Classic%20Recall/Classic%20Recall%20to%20Homebound%20Lily.zip"
+      },
+      {
+        "name": "Lunox Legend Recall",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Legend%20Lunox.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Classic%20Recall/Classic%20Recall%20to%20Lunox%20Legend%20Recall.zip"
+      }
+    ]
+  },
+  {
+    "source": "The Oriental Fighters",
+    "method": "_ORIENTAL_FIGHTERS",
+    "source_thumbnail": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Oriental%20Fighter.webp",
+    "backup_zip": "https://github.com/flaggedgithub/Return/raw/main/Oriental%20Fighter%20Backup.zip",
+    "replacements": [
+      {
+        "name": "Super Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Super%20Return.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Oriental%20Fighter%20to%20Firebolt.zip"
+      },
+      {
+        "name": "Firecrown",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Firecrown.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Oriental%20Fighter%20to%20Firecrown.zip"
+      },
+      {
+        "name": "Snowman",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Snowman.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Oriental%20Fighter%20to%20Snowman.zip"
+      },
+      {
+        "name": "Return of the Sword",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/The%20Return%20of%20the%20Sword.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Oriental%20Fighters%20to%20Return%20of%20the%20Sword.zip"
+      },
+      {
+        "name": "Seal of Anvil Crawlers",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Seal%20of%20Anvil%20Crawlers.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Oriental%20Fighters%20to%20Seal%20of%20Anvil%20Crawlers.zip"
+      },
+      {
+        "name": "Wonder Park",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Wonder%20Park.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighter%20to%20Sanrio%20Hello%20Kitty.zip"
+      },
+      {
+        "name": "M3 Savage Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/M3%20Savage%20Return.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighter%20to%20M3%20Prime.zip"
+      },
+      {
+        "name": "Dashing Cat",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Dashing%20Cat.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Dashing%20Cat.zip"
+      },
+      {
+        "name": "Fortification Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Fortification%20Return.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Aspirants%20(Fortification%20Recall).zip"
+      },
+      {
+        "name": "Black Void",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Black%20Void.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Black%20Void.zip"
+      },
+      {
+        "name": "The Return of the Exorcists",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Exorcist.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Exorcist.zip"
+      },
+      {
+        "name": "MLBB X Saint Seiya Recall Effect",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Saint%20Seiya.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Saint%20Seiya.zip"
+      },
+      {
+        "name": "Return of Hope",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Return%20of%20Hope.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Aspirants%20Recall%20(Return%20of%20Hope).zip"
+      },
+      {
+        "name": "Christmas",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Christmas.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Christmas.zip"
+      },
+      {
+        "name": "Emerald Road",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Emerald%20Road.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Emerald%20Road.zip"
+      },
+      {
+        "name": "Halloween",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Halloween.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Halloween.zip"
+      },
+      {
+        "name": "Lucky Golden Egg",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Lucky%20Golden%20Egg.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Lucky%20Golden%20Egg.zip"
+      },
+      {
+        "name": "Spring Festival",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Spring%20Festival.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Oriental%20Fighter/Oriental%20Fighters%20to%20Spring%20Festival.zip"
+      }
+    ]
+  },
+  {
+    "source": "MLBB x Star Wars",
+    "method": "_STARWARS",
+    "source_thumbnail": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Starwars.webp",
+    "backup_zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20Backup.zip",
+    "replacements": [
+      {
+        "name": "Dashing Cat",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Dashing%20Cat.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Dashing%20Cat.zip"
+      },
+      {
+        "name": "Firecrown",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Firecrown.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Firecrown.zip"
+      },
+      {
+        "name": "Homebound Lily",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Homebound%20Lily.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Kagura%20Recall.zip"
+      },
+      {
+        "name": "Return of the Sword",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/The%20Return%20of%20the%20Sword.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Return%20of%20the%20Sword.zip"
+      },
+      {
+        "name": "Seal of Anvil Crawlers",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Seal%20of%20Anvil%20Crawlers.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Seal%20of%20Anvil.zip"
+      },
+      {
+        "name": "Seal of Eternal Flower",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Seal%20of%20Eternal%20Flower.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Seal%20of%20Eternal.zip"
+      },
+      {
+        "name": "Snowman",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Snowman.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Snowman.zip"
+      },
+      {
+        "name": "Super Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Super%20Return.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Super%20Return.zip"
+      },
+      {
+        "name": "Thunder Returns",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Thunder%20Return.webp",
+        "zip": "https://github.com/flaggedgithub/Return/raw/main/Starwars%20to%20Thunder%20Return.zip"
+      },
+      {
+        "name": "Wonder Park",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Wonder%20Park.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Starwars/Starwars%20To%20Sanrio%20Hello%20Kitty.zip"
+      },
+      {
+        "name": "515! Shuttle!",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/515%202022.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Starwars/Starwars%20to%20515%202022.zip"
+      },
+      {
+        "name": "M3 Savage Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/M3%20Savage%20Return.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Starwars/Starwars%20to%20M3%20Prime.zip"
+      },
+      {
+        "name": "Fortification Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Fortification%20Return.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Starwars/Starwars%20to%20Aspirants%20(Fortification%20Recall).zip"
+      },
+      {
+        "name": "Black Void",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Black%20Void.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Starwars/Starwars%20to%20Black%20Void.zip"
+      },
+      {
+        "name": "The Return of the Exorcists",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Exorcist.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Starwars/Starwars%20to%20Exorcist.zip"
+      },
+      {
+        "name": "MLBB X Saint Seiya Recall Effect",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Saint%20Seiya.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Starwars/Starwars%20to%20Saint%20Seiya.zip"
+      },
+      {
+        "name": "Lunox Legend Recall",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Legend%20Lunox.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Starwars/Starwars%20to%20Lunox%20Legend%20Recall.zip"
+      }
+    ]
+  },
+  {
+    "source": "515 2022 (M-World)",
+    "method": "_NEW_515_2022",
+    "source_thumbnail": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/515%202022.webp",
+    "backup_zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20515%202022/New%20M-World%20Backup.zip",
+    "replacements": [
+      {
+        "name": "Seal of Anvil Crawlers",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Seal%20of%20Anvil%20Crawlers.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20515%202022/New%20M-World%20to%20Seal%20of%20Anvil.zip"
+      },
+      {
+        "name": "Foreboding Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Foreboding%20Return.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20515%202022/New%20M-World%20to%20Foreboding%20Return.zip"
+      },
+      {
+        "name": "Fortification Return",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Fortification%20Return.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20515%202022/515%20M-World%20to%20Aspirants%20(Fortification%20Recall).zip"
+      },
+      {
+        "name": "Black Void",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Black%20Void.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20515%202022/515%20M-World%20to%20Black%20Void.zip"
+      },
+      {
+        "name": "The Return of the Exorcists",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Exorcist.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20515%202022/515%20M-World%20to%20Exorcist.zip"
+      },
+      {
+        "name": "MLBB X Saint Seiya Recall Effect",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Saint%20Seiya.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20515%202022/515%20M-World%20to%20Saint%20Seiya.zip"
+      }
+    ]
+  },
+  {
+    "source": "Snowman",
+    "method": "_SNOWMAN",
+    "source_thumbnail": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Snowman.webp",
+    "backup_zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Snowman/Snowman%20Backup.zip",
+    "replacements": [
+      {
+        "name": "Firecrown",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Firecrown.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Snowman/Snowman%20to%20Fire%20Crown.zip"
+      },
+      {
+        "name": "Seal of Anvil Crawlers",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Seal%20of%20Anvil%20Crawlers.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Snowman/Snowman%20to%20Seal%20of%20Anvil%20Crawlers.zip"
+      },
+      {
+        "name": "The Return of the Exorcists",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Exorcist.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20M3/Snowman%20to%20Exorcist.zip"
+      },
+      {
+        "name": "Lunox Legend Recall",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Legend%20Lunox.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20Snowman/Snowman%20to%20Lunox%20Legend%20Recall.zip"
+      }
+    ]
+  },
+  {
+    "source": "M3 Glorious Return",
+    "method": "_M3",
+    "source_thumbnail": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/M3%20Savage%20Return.webp",
+    "backup_zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20M3/M3%20Backup.zip",
+    "replacements": [
+      {
+        "name": "Firecrown",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Firecrown.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20M3/M3%20to%20Firecrown.zip"
+      },
+      {
+        "name": "Seal of Anvil Crawlers",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Seal%20of%20Anvil%20Crawlers.webp",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20M3/M3%20to%20Seal%20Of%20Anvil.zip"
+      },
+      {
+        "name": "Lunox Legend Recall",
+        "image": "https://github.com/Meow00001/Image/raw/main/Recalls%20Landscape/Legend%20Lunox.jpeg",
+        "zip": "https://github.com/Meow00001/Script/raw/main/Recalls/Replacement%20to%20M3/M3%20to%20Lunox%20Legend%20Recall.zip"
+      }
+    ]
+  }
+]
