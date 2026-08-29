@@ -1,4 +1,8 @@
 {
-  "youtube_url": "https://youtu.be/azmHL2wD60s?si=7I86MpPaMvcsIyYp",
+  "youtube_urls": [
+    "https://youtu.be/azmHL2wD60s?si=7I86MpPaMvcsIyYp",
+    "https://youtu.be/75HrPdjEXyY?si=R3nh7Z56tB2kE3jF",
+    "https://youtu.be/aBvjD7jyvfw?si=aKn9hy4wFqq-gynd"
+  ],
   "youtube_verify_seconds": 10
 }
