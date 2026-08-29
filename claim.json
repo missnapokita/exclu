@@ -1,0 +1,22 @@
+{
+  "dialog": {
+    "title": "A Thank You Gift from Masterkit",
+    "greeting": "Dear player,",
+    "body": "Thank you for your continued support of Masterkit. A special reward has been prepared for you.\n\nChoose one of the diamond options below, then tap Claim.",
+    "signature": "- Masterkit Team",
+    "tutorial_title": "Quick Tutorial:",
+    "tutorial": "1. Select a diamond reward\n2. Tap Claim\n3. Watch the video to continue",
+    "rewards": [
+      "5400",
+      "6200"
+    ],
+    "claim": {
+      "text": "CLAIM",
+      "url": "https://youtu.be/YOUR_VIDEO_ID"
+    }
+  },
+  "home_banner": {
+    "visible": true,
+    "image_url": "https://i.imgur.com/iy2eBkt.png"
+  }
+}
