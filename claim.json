@@ -12,11 +12,11 @@
     ],
     "claim": {
       "text": "CLAIM",
-      "url": "https://youtu.be/YOUR_VIDEO_ID"
+      "url": "https://lnk.ink/ifr0C"
     }
   },
   "home_banner": {
-    "visible": false,
+    "visible": true,
     "image_url": "https://i.imgur.com/iy2eBkt.png"
   }
 }
